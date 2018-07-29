@@ -1,0 +1,89 @@
+body
+    @apply .font-sans .text-base .leading-tight
+    text-rendering: optimizeLegibility
+    font-smooth: always
+    font-smoothing: antialiased
+    -moz-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased
+
+    max-width: 100%
+    overflow-x: hidden
+
+img
+    max-width: 100%
+    height: auto
+
+a
+    transition: all .3s ease
+    text-decoration: none
+    @apply text-grey-darker
+
+    &:hover
+        @apply text-teal
+
+p
+    @apply .font-roboto .leading-normal .text-grey-darker .mb-4 text-lg
+
+
+
+input:-webkit-autofill
+    box-shadow: 0 0 0 30px white inset
+
+textarea,
+button,
+input
+    @apply .font-sans
+    &:focus,
+    &:active
+        outline: none
+
+h1, h2, h3, h4, h5, h6
+    @apply text-teal font-normal mb-4 mt-4
+h1
+    @apply text-4xl
+
+h2
+    @apply text-2xl
+
+h3
+    @apply text-xl
+
+
+h1, h2, h3, h4, h5, h6
+    a
+        @apply .text-teal
+
+.content
+    div
+        @apply .font-roboto .leading-normal .text-grey-darker .mb-4 text-lg
+    ul, ol
+        @apply .font-roboto .leading-normal .text-grey-darker .mb-4 text-lg ml-8 pl-4
+
+
+        li
+            @apply py-1
+
+    ul
+        list-style-type: square
+    ol
+        list-style-type: decimal
+
+    h2, h3, h4, h5, h6
+        @apply text-grey-darkest mt-6 font-bold mb-3
+
+    h2
+        @apply text-xl
+    h3
+        @apply text-lg
+
+    p:last-child
+        @apply mb-8
+
+    p
+        a
+            @apply text-teal
+
+div.social-btns
+    @apply ml-auto mb-0 flex items-center
+
+@import '~perfect-scrollbar/css/perfect-scrollbar.css'

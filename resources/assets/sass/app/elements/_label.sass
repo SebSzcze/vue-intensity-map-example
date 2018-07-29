@@ -1,0 +1,15 @@
+.label
+    border: 1px solid $grey-lighter
+    border-radius: $border-radius
+    font-size: 10px
+    font-weight: 900
+    padding: 2px 4px
+    text-transform: uppercase
+
+    @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        $color-invert: nth($pair, 2)
+        &.is-#{$name}
+            background: $color
+            border-color: $color
+            color: $color-invert

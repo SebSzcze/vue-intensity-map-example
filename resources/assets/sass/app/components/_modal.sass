@@ -1,0 +1,86 @@
+
+.modal
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    animation: slideInDown .3s ease
+    animation-fill-mode: both
+    animation-delay: 1s
+    z-index: 200
+
+    .is-closed
+        animation: slideOutUp .3s ease
+        animation-fill-mode: both
+
+    .modal-box
+        background: $white
+        box-shadow: $shadow rgba(50, 50, 50, 0.05)
+        display: flex
+        flex-direction: column
+        flex: 1
+
+
+
+        &.has-content-centered
+            .modal-body
+                margin: auto 0
+        .modal-body
+            flex: 1
+            padding: $padding
+
+    &:not(.is-page)
+        .modal-box
+            //margin: 40px
+            //min-width: 700px
+            //max-width: 900px
+
+
+    .modal-header,
+    .modal-footer
+        text-align: center
+        flex: 1
+        img
+            display: block
+            margin: 0 auto
+
+    &.is-intro
+        .modal-box
+            flex-direction: row
+
+        .modal-body
+            text-align: center
+        .title
+            margin-bottom: 10px
+        p
+            font-size: $size-5
+            line-height: 1.4
+            padding-bottom: 10px
+
+
+    &.is-page
+        z-index: 10
+        animation: slideInDown .3s ease
+        animation-fill-mode: both
+        animation-delay: 0s
+        position: absolute
+        bottom: auto
+        min-height: 100%
+        .modal-header
+            text-align: left
+            padding: $padding 0 $padding /2 0
+            flex: none
+            .title.is-1
+                font-weight: 300
+
+        .modal-box
+            padding: $padding *2 0
+            width: 100%
+
+.is-modal-page
+    overflow: hidden

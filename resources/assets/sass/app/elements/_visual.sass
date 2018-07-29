@@ -1,0 +1,52 @@
+.visual
+    background: url(../images/pattern.svg) repeat-y center center
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 100%
+    animation: slideInDown .5s
+    animation-delay: 1s
+    animation-fill-mode: both
+    &-top
+        background: url(../images/top.svg) no-repeat center top
+        height: 50%
+
+    &-box
+        background: $white
+        display: flex
+        height: 150px
+        width: 815px
+        max-width: 100%
+        margin: 0 auto
+        animation: scaleIn .5s
+        animation-delay: 1.5s
+        animation-fill-mode: both
+
+        &-icon
+            flex: 1
+            margin-right: 4%
+            display: inline-flex
+            align-items: center
+            animation: scaleIn .5s
+            animation-fill-mode: both
+
+
+            &:last-of-type
+                margin-right: 0
+
+            &.--social,
+            &.--cog
+                animation-delay: 2s
+            &.--park,
+            &.--building
+                animation-delay: 2.5s
+        &-logo
+            flex: 2.5
+            margin: 0 4%
+            display: inline-flex
+            align-items: center
+            animation: scaleIn .5s
+            animation-fill-mode: both
+            animation-delay: 3s
+
+

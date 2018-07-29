@@ -1,0 +1,33 @@
+.title
+    color: $primary
+    line-height: 1.3
+    @each $size in $sizes
+        $i: index($sizes, $size)
+        &.is-#{$i}
+            font-size: $size
+
+        &.is-white
+            color: $white
+
+@each $size in $sizes
+    $i: index($sizes, $size)
+    .is-fz-#{$i}
+        font-size: $size
+        line-height: 1.3
+
+
+.is-light
+    font-weight: $weight-light
+
+.description
+    color: darken($grey-light, 10)
+    font-size: $size-7
+
+
+.title
+    &.m-b-40
+        + .description
+            margin:
+                top: -30px
+                bottom: 40px
+            position: relative

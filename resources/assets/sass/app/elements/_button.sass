@@ -1,0 +1,37 @@
+.button
+    background: transparent
+    border: 0
+    display: inline-flex
+    justify-content: center
+    padding: 5px 8px
+    align-items: center
+    &:focus
+        outline: none
+    @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        $color-invert: nth($pair, 2)
+        &.is-#{$name}
+            background: $color
+            color: $color-invert
+
+    &.is-large
+        padding: 12px 20px
+    &.is-rounded
+        border-radius: $border-radius
+    &.is-small
+        font-size: $size-7
+    &.is-outlined
+        background: transparent
+        border: 2px solid $grey-light
+        color: $grey
+
+        @each $name, $pair in $colors
+            $color: nth($pair, 1)
+            $color-invert: nth($pair, 2)
+            &.is-#{$name}
+                background: transparent
+                border: 2px solid $color
+                color: $color
+
+
+

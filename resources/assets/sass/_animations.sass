@@ -1,0 +1,27 @@
+.opacity-enter,
+.opacity-leave-to
+    opacity: 0
+
+.opacity-leave,
+.opacity-enter-to
+    opacity: 1
+
+.opacity-enter-active,
+.opacity-leave-active
+    transition: opacity 10000ms
+
+
+.slideToLeft-enter,
+.slideToLeft-leave-to
+    opacity: .5
+    transform: translateX(100%)
+
+
+.slideToLeft-leave,
+.slideToLeft-enter-to
+    opacity: 1
+    transform: translateX(0%)
+
+.slideToLeft-enter-active,
+.slideToLeft-leave-active
+    transition: all .35s ease-in-out

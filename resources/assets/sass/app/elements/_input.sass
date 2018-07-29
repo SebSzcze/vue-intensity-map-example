@@ -1,0 +1,174 @@
+$togglerSize: 18px
+$togglerSpacing: 4px
+=input
+    background: transparent
+    border: 0
+    border-bottom: 1px solid darken($grey-light, 10)
+    border-radius: 0
+    margin: 10px 0
+    line-height: 1.2
+    padding: 8px
+    width: 100%
+
+=select
+    background: transparent
+    border: 0
+    border-bottom: 1px solid darken($grey-light, 10)
+    border-radius: 0
+    line-height: 1.2
+    padding: 8px
+    width: 100%
+
+.input,
+.textarea
+    +input
+
+    &:focus
+        border-color: $grey-dark
+        outline: none
+
+    &--large
+        font-size: $size-3
+
+.form
+    background: white
+    p
+        margin-bottom: 15px
+    .title
+        margin: $padding /4 0 $padding/2 0
+    &--proposition
+        margin-top: -$padding*4
+        padding: $padding
+
+    .button
+        font-size: $size-6
+    label
+        font-weight: 700
+        font-size: $size-7
+
+    .error
+        color: $red
+        display: block
+        margin-bottom: 10px
+
+.toggler
+    display: flex
+    align-items: center
+
+    span,
+    i
+        display: inline-flex
+        position: relative
+
+    i
+        background: rgba($grey-darker, .3)
+        border-radius: $togglerSize - $togglerSpacing
+        align-items: center
+        height: $togglerSize + 2 * $togglerSpacing
+        width: 2* $togglerSize + 2 * $togglerSpacing
+        transition: all .3s ease
+
+        &:after
+            background: $grey-lighter
+            content: ''
+            display: block
+            position: absolute
+            left: $togglerSpacing
+            height: $togglerSize
+            width: $togglerSize
+            border-radius: 50%
+            transiton: all ease-in-out .2s
+
+    [type="checkbox"]
+        + span,
+        + i
+            margin-right: 10px
+
+    [type="checkbox"]:checked
+        ~ i
+            background: $green
+
+            &:after
+                background: $white
+                left: auto
+                right: $togglerSpacing
+
+
+
+
+/* hide input */
+input.radio:empty
+    margin-left: -999px
+
+
+/* style label */
+input.radio:empty ~ label
+    position: relative
+    margin-top: 0.25em
+    cursor: pointer
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    margin-left: 2.5em
+    color: #fff
+    /*height: 1.5em*/
+
+
+input.radio:empty ~ label:before
+    background: rgba(52, 52, 52, 0.3)
+    border-radius: 2px
+    bottom: 0
+    content: ''
+    display: block
+    left: -2.5em
+    height: 24px
+    position: absolute
+    top: 50%
+    width: 24px
+    transform: translateY(-50%)
+
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before
+    content: '\2714'
+    color: #4fac37
+    text-align: center
+
+
+input.radio:hover:not(:checked) ~ label
+    color: #9CE2AE
+
+
+/* toggle on */
+input.radio:checked ~ label:before
+    content: '\2714'
+    color: #9CE2AE
+    background-color: #4fac37
+    text-align: center
+
+
+input.radio:checked ~ label
+    color: #9CE2AE
+
+
+.radio-item
+    margin-bottom: 15px
+    label
+        display: block
+    input[type="radio"]
+        display: none
+
+
+.radio-item-desc
+    color: rgba($white, .8)
+    font-size: $size-7
+    margin:
+        top: -10px
+        bottom: 20px
+    position: relative
+
+
+
+
+

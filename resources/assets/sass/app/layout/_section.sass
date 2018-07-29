@@ -1,0 +1,43 @@
+.section
+    padding: $padding * 2 0 $padding * 2 0
+
+
+    &.is-city
+        background: url(#{$images}/leszno-szybowiec.png) no-repeat right bottom
+        position: relative
+
+        &:before
+            background: $grey-lighter
+            content: ''
+            display: block
+            height: 1px
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+            width: 75%
+
+
+
+    @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        $color-invert: nth($pair, 2)
+        &.is-#{$name}
+            background: $color
+            color: $color-invert
+
+            .title
+                color: $color-invert
+
+
+    &.is-primary.is-bold
+        background: rgb(31,137,148); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(31,137,148,1) 0%, rgba(78,149,170,1) 100%)
+        background: -webkit-linear-gradient(-45deg, rgba(31,137,148,1) 0%,rgba(78,149,170,1) 100%)
+        background: linear-gradient(135deg, rgba(31,137,148,1) 0%,rgba(78,149,170,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f8994', endColorstr='#4e95aa',GradientType=1 )
+
+    &.is-grey
+        background: $grey-light
+
+

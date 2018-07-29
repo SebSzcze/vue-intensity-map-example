@@ -1,0 +1,105 @@
+// Bootstrap
+@import "node_modules/lari/sass/lari"
+
+.is-paddingless
+    padding: 0 !important
+
+$fa-font-path: '~font-awesome/fonts/'
+@import '~font-awesome/scss/font-awesome'
+@import '~flatpickr/dist/flatpickr.css'
+.flatpickr
+    &-days
+        flex-wrap: wrap
+        justify-content: center
+
+.datepicker
+
+    .has-icon
+        i
+            -webkit-transition: all .3s
+            transition: all .3s
+
+        .fa-times
+            display: none
+            cursor: pointer
+            pointer-events: all
+
+        &:hover
+            .fa-times
+                display: inline-block
+
+            .fa-calendar
+                display: none
+
+
+
+.z-1
+    z-index: 1
+button,
+input,
+select
+    &:focus,
+    &:active
+        outline: none
+.in
+    &:focus
+
+table.align-middle
+    td
+        vertical-align: middle
+
+label.block
+    margin-bottom: 0
+
+.float-input
+
+    input,
+    select
+        &:focus
+            outline: none
+    label
+        top: 4px
+        left: 4px
+        display: block
+        transition: .3s ease all
+    &-xs
+        label
+            top: 0px
+
+    &-sm
+        label
+            top: 1px
+    input.pt-6
+    //padding-top: 1.3rem
+    &.empty
+        label
+            cursor: text
+            top: 50%
+            transform: translateY(-50%)
+
+    &.active
+        label
+//color: $primary
+
+.container-full
+    max-width: 100%
+
+.mr-12
+    margin-right: 3rem
+
+.medium-editor-element
+    line-height: 1.5
+    h1, h2, h3, h4
+        margin-bottom: .5rem
+    p, ul
+        margin-bottom: 1rem
+
+    ul
+        list-style-type: circle
+        margin: 1rem
+
+.truncate
+    width: 250px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis

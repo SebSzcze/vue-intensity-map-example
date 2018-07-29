@@ -1,0 +1,3 @@
+[submodule "intensity"]
+    path = public/intensity
+    url = git@bitbucket.org:laridev/leszno-intensity-map.git

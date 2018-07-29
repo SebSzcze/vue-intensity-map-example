@@ -1,0 +1,26 @@
+.select
+    +select
+
+    -webkit-appearance: none
+    -webkit-border-radius: 0px
+    -moz-appearance: none
+
+    &:focus
+        border-color: $grey-dark
+        outline: none
+
+
+.control-select
+    align-items: center
+    display: flex
+    position: relative
+
+
+    &:after
+        content: ''
+        display: block
+        right: 4px
+        top: 50%
+        transform: translateY(-50%)
+        position: absolute
+        +triangle(4px, darken($grey-light, 10))

@@ -1,0 +1,30 @@
+.navigation
+    &-item
+        @apply relative
+
+
+        ul
+            @apply absolute bg-white shadow-lg rounded py-2 hidden  mt-2
+            min-width: 250px
+
+            li
+                > ul
+                    right: 100%
+                    top: -20%
+                    margin-top: 0
+
+                &:hover
+                    > a
+                        @apply text-white bg-teal
+            a
+                @apply p-2 py-1 flex items-center px-4 leading-normal
+                white-space: nowrap
+
+                &:hover
+                    @apply text-white bg-teal
+
+
+
+        &:hover
+            > ul
+                @apply block

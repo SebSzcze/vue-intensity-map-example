@@ -1,0 +1,154 @@
+.entity
+    position: relative
+
+    &-type
+        border-radius: $border-radius
+        display: inline-block
+        font-size: 10px
+        font-weight: 900
+        padding: 4px $padding/2
+        text-transform: uppercase
+
+        @each $name, $pair in $colors
+            $color: nth($pair, 1)
+            $color-invert: nth($pair, 2)
+            &.is-#{$name}
+                background: $color
+                color: $color-invert
+
+    &-title
+        font-size: $size-6
+        margin-bottom: 10px
+        line-height: 1.5
+    &-name
+        color: $white
+        display: block
+        margin-bottom: 5px
+        font-size: $size-4
+
+
+    &-street
+        display: block
+
+    &.is-big &-street
+        color: $white
+        font-size: $size-5
+
+
+    &.is-big &-content
+        bottom: 0
+        left: 0
+        line-height: 1.5
+        position: absolute
+        padding: $padding /2
+        z-index: 10
+
+    &-gradient
+        position: absolute
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%)
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 )
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        z-index: 1
+    &-street
+        font-size: 13px
+        padding-bottom: 5px
+        i
+            margin-right: 5px
+
+    &-photo
+        display: block
+        position: relative
+        z-index: 0
+        img
+            display: block
+
+
+    &-excerpt
+        font-size: 12px
+        padding-top: 5px
+
+    &:not(.is-big)
+        border-bottom: 1px solid rgba(255,255,255, .1)
+        padding:  $padding/2 0
+        .entity-excerpt
+            color: rgba($white, .7)
+
+        &:not(.--side)
+            .entity-street
+                color: rgba($white, .8)
+
+    &:not(.is-big) &-photo
+        flex: none
+        margin-right: 10px
+    &:not(.is-big) &-content
+        flex: 2
+
+    &.--side
+        padding: 0
+        display: flex
+        flex-direction: column
+        height: 100%
+        .entity-head
+            flex: none
+            display: flex
+
+            .button.is-right
+                color: $grey
+                border: 2px solid $grey-light
+                border-radius: $border-radius
+                font-size: $size-7
+
+                margin-left: auto
+
+        .entity-name
+            color: $grey
+            padding-bottom: 1rem
+            .title
+                font-weight: 300
+                font-size: 1.85rem
+                margin: 0 0 .5rem 0
+
+        .entity-foot
+
+            padding: $padding/2 0
+
+
+
+        .entity-content
+            padding: $padding /2 0
+
+
+        .entity-share
+            margin-top: auto
+.entity-body
+    padding-right: 2rem
+    padding-bottom: 4rem
+    padding-top: 1.5rem
+
+.entity-sidebar
+    background: white
+    margin-top: -5rem
+
+.entity-share
+    padding: 40px 0
+    .title
+        color: $grey
+.entity-share-links
+    padding-top: 10px
+    span
+        border: 2px solid $grey-light
+        border-radius: $border-radius
+        font-size: 13px
+        display: inline-block
+        cursor: pointer
+        padding: 2px 5px
+
+
+.entity-content-photo
+    float: left
+    margin: 0 1rem .5rem 0

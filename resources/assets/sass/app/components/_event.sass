@@ -1,0 +1,55 @@
+.event
+    display: flex
+    flex: 1
+
+    &-date
+        width: $padding * 1.5
+
+        &-frame
+            border: 2px solid rgba($white,.4)
+            border-radius: $border-radius
+            color: rgba($white,.4)
+            line-height: 1.1
+            padding: 5px 0
+            text-align: center
+
+            strong
+                color: rgba($white,.8)
+                display: block
+                font-size: $size-4
+                font-weight: 700
+
+    &-content
+        flex: 1
+        margin: 0 $padding/2
+
+        .more
+            background: $blue
+            border: 2px solid $blue
+            border-radius: $border-radius
+            color: rgba($white, .9)
+            display: inline-flex
+            font-weight: 700
+            font-size: $size-7
+            padding: 5px 14px
+            transition: .3s ease all
+
+            &:hover
+                background: transparent
+
+
+        .title
+            margin-bottom: 5px
+
+            a
+                color: rgba($white, .8)
+                display: inline-block
+                transition: .3s ease all
+
+                &:hover
+                    color: rgba($white, .96)
+
+        &-excerpt
+            color: rgba($white, .6)
+            padding: 10px 0
+
